@@ -2,4 +2,6 @@ services:
   php:
     image: trafex/php-nginx
     volumes:
-      - .:/var/www/html/
+      - type: bind
+        source: .
+        target: /var/www/html
